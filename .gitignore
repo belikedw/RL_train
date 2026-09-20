@@ -1,0 +1,41 @@
+# Python虚拟环境、缓存与构建产物
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+*.egg-info/
+build/
+dist/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ROS2构建目录与运行日志
+install/
+log/
+logs/
+*.log
+
+# 训练模型、数据集、TensorBoard与RViz运行会话
+artifacts/*
+!artifacts/.gitkeep
+
+# 本地凭据与编辑器临时文件；示例配置仍可提交
+.env
+.env.*
+!.env.example
+!.env.sample
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

@@ -1,0 +1,92 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Tool Properties
+    Name: Tool Properties
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 40; 40; 40
+    Fixed Frame: map
+    Frame Rate: 20
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 30
+      Reference Frame: map
+    - Class: rviz_default_plugins/Map
+      Name: Map
+      Enabled: true
+      Alpha: 0.85
+      Draw Behind: true
+      Topic:
+        Value: /rl_training/map
+        Depth: 1
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+    - Class: rviz_default_plugins/Path
+      Name: Global Path
+      Enabled: true
+      Color: 40; 255; 80
+      Line Style: Billboards
+      Line Width: 0.045
+      Topic:
+        Value: /rl_training/global_path
+        Depth: 1
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+    - Class: rviz_default_plugins/Path
+      Name: Actual Trajectory
+      Enabled: true
+      Color: 255; 140; 30
+      Line Style: Billboards
+      Line Width: 0.035
+      Topic:
+        Value: /rl_training/trajectory
+        Depth: 1
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Robot and Status
+      Enabled: true
+      Topic:
+        Value: /rl_training/markers
+        Depth: 1
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /rl_training/initialpose
+        Depth: 5
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Value: /rl_training/goal_pose
+        Depth: 5
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Target Frame: map
+      Scale: 60
+      X: 6
+      Y: 5
+      Angle: 0
+Window Geometry:
+  Width: 1280
+  Height: 900

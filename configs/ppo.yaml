@@ -1,0 +1,24 @@
+seed: 42
+num_envs: 8
+total_timesteps: 1000000
+checkpoint_frequency: 100000
+evaluation_frequency: 50000
+evaluation_episodes: 20
+
+ppo:
+  learning_rate: 0.0003
+  n_steps: 1024
+  batch_size: 256
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.20
+  ent_coef: 0.01
+  vf_coef: 0.50
+  max_grad_norm: 0.50
+  net_arch: [256, 256]
+
+behavior_cloning:
+  epochs: 10
+  batch_size: 512
+  learning_rate: 0.0003
